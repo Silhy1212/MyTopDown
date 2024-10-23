@@ -12,6 +12,7 @@ public class Game1 : Game
     private Texture2D _texture;
     private Vector2 spritePosition;
     private float rotationAngle;
+    public float _playerSpeed = 3f;
     
     
     
@@ -56,23 +57,42 @@ public class Game1 : Game
        
         
         KeyboardState state = Keyboard.GetState();
-        float rotationSpeed = 2f; 
+        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
+            Keyboard.GetState().IsKeyDown(Keys.Escape))
+        {
+            Exit();
+        }
+
         
-        if (state.IsKeyDown(Keys.W))
-        {
-            spritePosition.Y -= 1;
-        }
-        if (state.IsKeyDown(Keys.S))
-        {
-            spritePosition.Y += 1;
-        }
+
         if (state.IsKeyDown(Keys.D))
         {
-            spritePosition.X += 1;
-        } if (state.IsKeyDown(Keys.A))
-        {
-            spritePosition.X -= 1;
+            rotationAngle += 0.06f;
+            //_tankPosition.X += _playerSpeed;
         }
+
+        if (state.IsKeyDown(Keys.A))
+        {
+            rotationAngle -= 0.06f;
+            //_tankPosition.X -= _playerSpeed;
+        }
+
+        if (state.IsKeyDown(Keys.W))
+        {
+            spritePosition.X += (float)Math.Sin(rotationAngle) * _playerSpeed;
+            spritePosition.Y -= (float)Math.Cos(rotationAngle) * _playerSpeed;
+            //_tankPosition.Y -= _playerSpeed;
+        }
+
+        if (state.IsKeyDown(Keys.S))
+        {
+            //_tankPosition.Y += _playerSpeed;
+            spritePosition.X -= (float)Math.Sin(rotationAngle) * _playerSpeed;
+            spritePosition.Y += (float)Math.Cos(rotationAngle) * _playerSpeed;
+        }
+        
+       
+
         
 
 
@@ -89,11 +109,10 @@ public class Game1 : Game
         // TODO: Add your drawing code here
         _spriteBatch.Begin();
 
-        var rectangle = new Rectangle(0, 0, 60, 35);
+        var rectangle = new Rectangle(0, 0, 35, 60);
 
        
-        _spriteBatch.Draw(_texture, spritePosition, rectangle, Color.White);
-        _spriteBatch.End();
+        _spriteBatch.Draw(_texture, spritePosition, rectangle, Color.White, rotationAngle, new Vector2(rectangle.Width / 2f, rectangle.Height / 2f), Vector2.One, SpriteEffects.None, 0);        _spriteBatch.End();
         base.Draw(gameTime);
     }
 }
