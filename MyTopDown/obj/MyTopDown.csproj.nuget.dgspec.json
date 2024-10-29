@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matej.silhan\\Desktop\\MyTopDown\\MyTopDown\\MyTopDown.csproj": {}
+    "C:\\Users\\matej silhan\\OneDrive\\Plocha\\MyTopDown\\MyTopDown\\MyTopDown.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matej.silhan\\Desktop\\MyTopDown\\MyTopDown\\MyTopDown.csproj": {
+    "C:\\Users\\matej silhan\\OneDrive\\Plocha\\MyTopDown\\MyTopDown\\MyTopDown.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matej.silhan\\Desktop\\MyTopDown\\MyTopDown\\MyTopDown.csproj",
+        "projectUniqueName": "C:\\Users\\matej silhan\\OneDrive\\Plocha\\MyTopDown\\MyTopDown\\MyTopDown.csproj",
         "projectName": "MyTopDown",
-        "projectPath": "C:\\Users\\matej.silhan\\Desktop\\MyTopDown\\MyTopDown\\MyTopDown.csproj",
-        "packagesPath": "C:\\Users\\matej.silhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matej.silhan\\Desktop\\MyTopDown\\MyTopDown\\obj\\",
+        "projectPath": "C:\\Users\\matej silhan\\OneDrive\\Plocha\\MyTopDown\\MyTopDown\\MyTopDown.csproj",
+        "packagesPath": "C:\\Users\\matej silhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\matej silhan\\OneDrive\\Plocha\\MyTopDown\\MyTopDown\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\matej.silhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\matej silhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,11 +39,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -73,7 +73,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
