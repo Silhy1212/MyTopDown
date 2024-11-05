@@ -89,7 +89,7 @@ namespace MyTopDown
             if (mouseState.LeftButton == ButtonState.Pressed && timeSinceLastShot >= shootCooldown)
             {
                 Vector2 projectileDirection = Vector2.Normalize(direction);
-                projectiles.Add(new Projectile(spritePosition, projectileDirection, _projectileTexture, "Player")); // Set owner as "Player"
+                projectiles.Add(new Projectile(spritePosition, projectileDirection, _projectileTexture, "Player")); 
                 timeSinceLastShot = 0f;
             }
 
@@ -149,7 +149,7 @@ namespace MyTopDown
     public class EnemyTank
     {
         public Vector2 Position;
-        public float Speed;
+        public float Speed ;
         public Texture2D Texture;
         public float Rotation;
         private Texture2D projectileTexture;
